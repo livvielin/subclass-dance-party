@@ -1,7 +1,10 @@
 var PhoenixDancer = function(top, left, timeBetweenSteps){
   Dancer.apply(this, arguments);
-  //this.$node = $('<span class="dancer phoenix"></span>');
-  this.$node.addClass('phoenix');
+  var phoenixes = ['Voldemort', 'Bellatrix', 'Malfoy'];
+  var pick = Math.floor(Math.random() * phoenixes.length);
+  var phoenixName = phoenixes[pick];
+  var imgSource = 'src/images/' + phoenixName + '.jpeg';
+  this.$node.addClass('phoenix').prepend('<img class="harry" src="src/images/Ron.jpeg"/>');
 };
 
 PhoenixDancer.prototype = Object.create(Dancer.prototype);

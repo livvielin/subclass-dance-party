@@ -3,7 +3,10 @@ var DeathEaterDancer = function(top, left, timeBetweenSteps){
   var eaters = ['Voldemort', 'Bellatrix', 'Malfoy'];
   var pick = Math.floor(Math.random() * eaters.length);
   var eaterName = eaters[pick];
-  this.$node.addClass('deathEater').prepend('<img src="src/images/Voldemort.jpeg"/>');
+  var imgSource = 'src/images/' + eaterName + '.jpeg';
+  this.$node.addClass('deathEater').prepend('<img class="voldemort" src="src/images/Voldemort.jpeg"/>');
+  // from http://www.zerochan.net/1395261#full
+  // this.$('img').attr('src', imgSource);
 };
 
 DeathEaterDancer.prototype = Object.create(Dancer.prototype);
