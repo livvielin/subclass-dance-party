@@ -35,5 +35,5 @@ Dancer.prototype.step = function(){
 };
 
 Dancer.prototype.lineUp = function() {
-  this.setPosition(50, this.left);
+  this.setPosition($("body").height() / 2, this.left);
 };

@@ -24,5 +24,8 @@ DeathEaterDancer.prototype.step = function(){
   this.oldStep();
   // death eater sends out dark mark
   this.$node.fadeToggle();
+};
 
+DeathEaterDancer.prototype.lineUp = function() {
+  this.setPosition(50, this.left);
 };
