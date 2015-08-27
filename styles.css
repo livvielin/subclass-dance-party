@@ -25,3 +25,16 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.deathEater{
+  border:10px solid red;
+  border-radius:10px;
+  position:absolute;
+}
+.phoenix{
+  border:10px solid red;
+  border-radius:10px;
+  position:absolute;
+}
+img {
+  height: 200px;
+}
