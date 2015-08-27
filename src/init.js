@@ -32,9 +32,34 @@ $(document).ready(function(){
   });
 
   $(".lineUp").on("click", function(event) {
+    // set separate dancer arrays
+    var deathEaters = [];
+    var phoenixes = [];
+    var muggles = [];
+    // fill three arrays with dancers based on type
     for (var dancer = 0; dancer < window.dancers.length; dancer++) {
-      window.dancers[dancer].lineUp();
-    } 
+      if (window.dancers[dancer] instanceof DeathEaterDancer) {
+        deathEaters.push(window.dancers[dancer]);
+      } else if (window.dancers[dancer] instanceof PhoenixDancer) {
+        phoenixes.push(window.dancers[dancer]);
+      } else {
+        muggles.push(window.dancers[dancer]);
+      }
+    }
+    // store spacing units by dividing body width by array lengths
+    var deathUnit = $(window).width() / deathEaters.length + 1;
+    var phoenixUnit = $(window).width() / phoenixes.length + 1;
+    var muggleUnit = $(window).width() / muggles.length + 1;
+    // iterate through each array and call lineUp passing in an incremented location
+    for (var i = 0; i < deathEaters.length; i++) {
+      deathEaters[i].lineUp(deathUnit * (i+1) - 0.75*deathUnit);
+    }
+    for (var i = 0; i < phoenixes.length; i++) {
+      phoenixes[i].lineUp(phoenixUnit * (i+1) - 0.75*phoenixUnit);
+    }
+    for (var i = 0; i < muggles.length; i++) {
+      muggles[i].lineUp(muggleUnit * (i+1) - 0.75*muggleUnit);
+    }
   });
 
   $(document).on("click", ".deathEater", function(event){

@@ -35,9 +35,7 @@ Dancer.prototype.step = function(){
 };
 
 Dancer.prototype.lineUp = function(x) {
-  x = x || this.left
-  // set variables to count each type of dancer
-  // iterate through window.dancers to count types of dancers
+  x = x || this.left;
   this.setPosition($("body").height() / 2, x);
 };
 

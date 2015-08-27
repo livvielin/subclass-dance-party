@@ -53,7 +53,7 @@ body, a:link, a:visited, a:active{
 }
 .muggle{
   position:absolute;
-  transition: top 3s;
+  transition: 3s;
 }
 .pig {
   border:5px solid yellow;
@@ -75,7 +75,7 @@ body, a:link, a:visited, a:active{
 }
 .deathEater{
   position:absolute;
-  transition: top 3s;
+  transition: 3s;
 }
 .order{
   border:5px solid red;
@@ -89,7 +89,7 @@ body, a:link, a:visited, a:active{
 }
 .phoenix{
   position:absolute;
-  transition: top 3s;
+  transition: 3s;
 }
 .death:hover{
   height: 500px;

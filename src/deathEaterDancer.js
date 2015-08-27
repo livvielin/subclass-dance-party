@@ -26,8 +26,9 @@ DeathEaterDancer.prototype.step = function(){
   //this.$node.fadeToggle();
 };
 
-DeathEaterDancer.prototype.lineUp = function() {
-  this.setPosition(50, this.left);
+DeathEaterDancer.prototype.lineUp = function(x) {
+  x = x || this.left;
+  this.setPosition(50, x);
 };
 
 DeathEaterDancer.prototype.annihilate = function() {

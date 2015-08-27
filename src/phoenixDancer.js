@@ -23,6 +23,7 @@ PhoenixDancer.prototype.step = function(){
   //this.$node.slideToggle();
 };
 
-PhoenixDancer.prototype.lineUp = function() {
-  this.setPosition($("body").height() - 100, this.left);
+PhoenixDancer.prototype.lineUp = function(x) {
+  x = x || this.left;
+  this.setPosition($("body").height() - 100, x);
 };
