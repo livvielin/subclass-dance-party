@@ -5,6 +5,7 @@ describe("deathEaterDancer", function() {
   var clock;
 
   beforeEach(function() {
+    clock = sinon.useFakeTimers();
     deathEaterDancer = new DeathEaterDancer(10, 20, timeBetweenSteps);
   });
 
@@ -13,9 +14,9 @@ describe("deathEaterDancer", function() {
   });
 
   it("should have a step function that makes its node blink", function() {
-    sinon.spy(deathEaterDancer.$node, 'toggle');
+    sinon.spy(deathEaterDancer.$node, 'fadeToggle');
     deathEaterDancer.step();
-    expect(deathEaterDancer.$node.toggle.called).to.be.true;
+    expect(deathEaterDancer.$node.fadeToggle.called).to.be.true;
   });
 
   describe("dance", function(){
