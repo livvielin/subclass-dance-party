@@ -25,9 +25,17 @@ $(document).ready(function(){
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
-      Math.random() * 1000
+      Math.random() * 1000 + 500
     );
     $('body').append(dancer.$node);
+    dancers.push(dancer);
   });
+
+  $(".lineUp").on("click", function(event) {
+    for (var dancer = 0; dancer < window.dancers.length; dancer++) {
+      window.dancers[dancer].lineUp();
+    } 
+  });
+
 });
 

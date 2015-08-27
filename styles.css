@@ -55,3 +55,7 @@ body, a:link, a:visited, a:active{
 .death:hover{
   height: 500px;
 }
+.lineUp {
+  float: left;
+  padding:5px 12px;
+}

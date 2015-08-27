@@ -32,5 +32,8 @@ Dancer.prototype.step = function(){
   // it just schedules the next step
   var context = this;
   setTimeout(function() {context.step();}, context.timeBetweenSteps);
+};
 
+Dancer.prototype.lineUp = function() {
+  this.setPosition(50, this.left);
 };

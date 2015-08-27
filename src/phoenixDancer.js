@@ -21,5 +21,4 @@ PhoenixDancer.prototype.step = function(){
   this.oldStep();
   // phoenix dancer does something
   this.$node.slideToggle();
-
 };
