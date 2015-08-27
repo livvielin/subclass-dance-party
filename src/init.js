@@ -37,5 +37,13 @@ $(document).ready(function(){
     } 
   });
 
+  $(document).on("click", ".deathEater", function(event){
+    for (var dancer = 0; dancer < window.dancers.length; dancer++) {
+      if (window.dancers[dancer].$node.css('left') === $(this).css('left')) {
+        window.dancers[dancer].annihilate();
+      }
+    }
+  });
+
 });
 

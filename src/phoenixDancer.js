@@ -20,7 +20,7 @@ PhoenixDancer.prototype.step = function(){
   // call the old version of step at the beginning of any call to this new version of step
   this.oldStep();
   // phoenix dancer does something
-  this.$node.slideToggle();
+  //this.$node.slideToggle();
 };
 
 PhoenixDancer.prototype.lineUp = function() {

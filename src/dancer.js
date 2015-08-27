@@ -37,3 +37,7 @@ Dancer.prototype.step = function(){
 Dancer.prototype.lineUp = function() {
   this.setPosition($("body").height() / 2, this.left);
 };
+
+Dancer.prototype.findDistance = function(enemy) {
+  return Math.sqrt(Math.pow((this.top - enemy.top), 2) + Math.pow((this.left - enemy.left), 2));
+};

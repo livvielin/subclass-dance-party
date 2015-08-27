@@ -23,9 +23,30 @@ DeathEaterDancer.prototype.step = function(){
   // call the old version of step at the beginning of any call to this new version of step
   this.oldStep();
   // death eater sends out dark mark
-  this.$node.fadeToggle();
+  //this.$node.fadeToggle();
 };
 
 DeathEaterDancer.prototype.lineUp = function() {
   this.setPosition(50, this.left);
+};
+
+DeathEaterDancer.prototype.annihilate = function() {
+  for (var enemy = 0; enemy < window.dancers.length; enemy++) {
+    if (!(window.dancers[enemy] instanceof DeathEaterDancer)) {
+      var distance = this.findDistance(window.dancers[enemy]);
+      if (window.dancers[enemy] instanceof PhoenixDancer) {
+        if (distance < 500) {
+          window.dancers[enemy].$node.remove();
+          window.dancers.splice(enemy,1);
+          console.log('Killed a wizard muahahahhah');
+        }
+      } else {
+        if (distance < 1000) {
+          window.dancers[enemy].$node.remove();
+          window.dancers.splice(enemy,1);
+          console.log('Killed a filthy muggle argh');
+        }
+      }
+    }
+  }
 };
