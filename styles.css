@@ -53,12 +53,15 @@ body, a:link, a:visited, a:active{
 }
 .muggle{
   position:absolute;
+  transition: top 3s;
 }
 .pig {
   border:5px solid yellow;
   border-radius:10px;
   height: 150px;
-  -webkit-animation: fullspin 3s infinite;
+  -webkit-animation-name: fullspin;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
 }
 .death{
   border:5px solid green;
@@ -72,6 +75,7 @@ body, a:link, a:visited, a:active{
 }
 .deathEater{
   position:absolute;
+  transition: top 3s;
 }
 .order{
   border:5px solid red;
@@ -85,6 +89,7 @@ body, a:link, a:visited, a:active{
 }
 .phoenix{
   position:absolute;
+  transition: top 3s;
 }
 .death:hover{
   height: 500px;

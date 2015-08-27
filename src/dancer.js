@@ -34,8 +34,11 @@ Dancer.prototype.step = function(){
   setTimeout(function() {context.step();}, context.timeBetweenSteps);
 };
 
-Dancer.prototype.lineUp = function() {
-  this.setPosition($("body").height() / 2, this.left);
+Dancer.prototype.lineUp = function(x) {
+  x = x || this.left
+  // set variables to count each type of dancer
+  // iterate through window.dancers to count types of dancers
+  this.setPosition($("body").height() / 2, x);
 };
 
 Dancer.prototype.findDistance = function(enemy) {
