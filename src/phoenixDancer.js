@@ -1,6 +1,6 @@
 var PhoenixDancer = function(top, left, timeBetweenSteps){
   Dancer.apply(this, arguments);
-  var phoenixes = ['Harry', 'Ron', 'Hermione', 'Luna', 'Dobby'];
+  var phoenixes = ['Harry', 'Ron', 'Hermione', 'Luna', 'Dobby', 'Dumbledore'];
   var pick = Math.floor(Math.random() * phoenixes.length);
   var phoenixName = phoenixes[pick];
   var imgSource = 'src/images/' + phoenixName + '.jpeg';
