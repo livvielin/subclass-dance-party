@@ -1,6 +1,6 @@
 var DeathEaterDancer = function(top, left, timeBetweenSteps){
   Dancer.apply(this, arguments);
-  var eaters = ['Voldemort', 'Bellatrix', 'Malfoy'];
+  var eaters = ['Voldemort', 'Bellatrix', 'Malfoy', 'Dementor', 'Snape'];
   var pick = Math.floor(Math.random() * eaters.length);
   var eaterName = eaters[pick];
   var imgSource = 'src/images/' + eaterName + '.jpeg';
@@ -23,6 +23,6 @@ DeathEaterDancer.prototype.step = function(){
   // call the old version of step at the beginning of any call to this new version of step
   this.oldStep();
   // death eater sends out dark mark
-  this.$node.toggle();
+  this.$node.fadeToggle();
 
 };

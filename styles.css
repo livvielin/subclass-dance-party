@@ -4,6 +4,9 @@ body, html{
 body{
   margin: 0px;
   background-color:#444;
+  background: url(http://hdwallpapersfit.com/wp-content/uploads/2015/03/hogwarts-wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -21,11 +24,19 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
+  border:10px solid blue;
   border-radius:10px;
   position:absolute;
 }
-.death {
+.muggle{
+  border:5px solid yellow;
+  border-radius:10px;
+  position:absolute;
+}
+.pig {
+  height: 150px;
+}
+.death{
   height: 200px;
 }
 .deathEater{
@@ -33,7 +44,7 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
-.order {
+.order{
   height: 75px;
 }
 .phoenix{

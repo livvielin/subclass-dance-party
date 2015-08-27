@@ -1,6 +1,6 @@
 var PhoenixDancer = function(top, left, timeBetweenSteps){
   Dancer.apply(this, arguments);
-  var phoenixes = ['Harry', 'Ron', 'Hermione'];
+  var phoenixes = ['Harry', 'Ron', 'Hermione', 'Luna', 'Dobby'];
   var pick = Math.floor(Math.random() * phoenixes.length);
   var phoenixName = phoenixes[pick];
   var imgSource = 'src/images/' + phoenixName + '.jpeg';
@@ -20,6 +20,6 @@ PhoenixDancer.prototype.step = function(){
   // call the old version of step at the beginning of any call to this new version of step
   this.oldStep();
   // phoenix dancer does something
-  this.$node.toggle();
+  this.$node.slideToggle();
 
 };

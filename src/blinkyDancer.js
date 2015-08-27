@@ -1,5 +1,10 @@
 var BlinkyDancer = function(top, left, timeBetweenSteps){
   Dancer.apply(this, arguments);
+  var muggles = ['Dudley'];
+  var pick = Math.floor(Math.random() * muggles.length);
+  var muggleName = muggles[pick];
+  var imgSource = 'src/images/' + muggleName + '.jpeg';
+  this.$node.addClass('muggle').prepend('<img class="pig" src="'+imgSource+'"/>');
 };
 
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
