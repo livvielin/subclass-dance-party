@@ -23,33 +23,67 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+@-webkit-keyframes fullspin {
+  from {
+    -webkit-transform:rotate(0deg);
+  }
+  to {
+    -webkit-transform:rotate(360deg);
+  }
+}
+@-webkit-keyframes jig {
+  from {
+    -webkit-transform: rotate(-15deg);
+  }
+  to {
+    -webkit-transform: rotate(15deg);
+  }
+}
+@-webkit-keyframes slide {
+  0% { transform: translate(0px); }
+  17% { transform: translate(10px); }
+  34% { transform: translate(-10px); }
+  51% { transform: translate(6px); }
+  68% { transform: translate(-6px); }
+  85% { transform: translate(3px); }
+  100% { transform: translate(0px); }
+}
 .dancer{
-  border:10px solid blue;
-  border-radius:10px;
   position:absolute;
 }
 .muggle{
-  border:5px solid yellow;
-  border-radius:10px;
   position:absolute;
 }
 .pig {
+  border:5px solid yellow;
+  border-radius:10px;
   height: 150px;
+  -webkit-animation: fullspin 3s infinite;
 }
 .death{
-  height: 200px;
-}
-.deathEater{
   border:5px solid green;
   border-radius:10px;
+  height: 200px;
+  transition: height 1s;
+  -webkit-animation-name: slide;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+.deathEater{
   position:absolute;
 }
 .order{
-  height: 75px;
-}
-.phoenix{
   border:5px solid red;
   border-radius:10px;
+  height: 75px;
+  -webkit-animation-name: jig;
+  -webkit-animation-duration: 0.25s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+}
+.phoenix{
   position:absolute;
 }
 .death:hover{
