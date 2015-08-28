@@ -7,10 +7,11 @@ body{
   background: url(http://hdwallpapersfit.com/wp-content/uploads/2015/03/hogwarts-wallpaper.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
-  font-size: 18px;
+  font: 300 20px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
+  text-decoration: none;
 }
 .title, .addDancerButton{
   padding:5px 12px;
