@@ -60,6 +60,8 @@ $(document).ready(function(){
     for (var i = 0; i < muggles.length; i++) {
       muggles[i].lineUp(muggleUnit * (i+1) - 0.75*muggleUnit);
     }
+
+    $("#Harry").play();
   });
 
   $(document).on("click", ".deathEater", function(event){
@@ -68,6 +70,10 @@ $(document).ready(function(){
         window.dancers[dancer].annihilate();
       }
     }
+  });
+
+  $(".Harry").on("click", function(event) {
+    $("#Harry").load().play();
   });
 
 });

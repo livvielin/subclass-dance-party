@@ -4,7 +4,8 @@ var DeathEaterDancer = function(top, left, timeBetweenSteps){
   var pick = Math.floor(Math.random() * eaters.length);
   var eaterName = eaters[pick];
   var imgSource = 'src/images/' + eaterName + '.jpeg';
-  this.$node.addClass('deathEater').prepend('<img class="death" src="'+imgSource+'"/>');
+  var className = 'deathEater ' + eaters[pick];
+  this.$node.addClass(className).prepend('<img class="death" src="'+imgSource+'"/>');
   // http://img10.deviantart.net/a9ef/i/2013/346/7/4/harry_potter_characters_by_saltymoose-d6xo7ik.jpg
   // from http://www.zerochan.net/1395261#full
   // this.$('img').attr('src', imgSource);

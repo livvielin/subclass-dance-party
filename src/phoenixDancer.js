@@ -4,7 +4,8 @@ var PhoenixDancer = function(top, left, timeBetweenSteps){
   var pick = Math.floor(Math.random() * phoenixes.length);
   var phoenixName = phoenixes[pick];
   var imgSource = 'src/images/' + phoenixName + '.jpeg';
-  this.$node.addClass('phoenix').prepend('<img class="order" src="'+imgSource+'"/>');
+  var className = 'phoenix ' + phoenixes[pick];
+  this.$node.addClass(className).prepend('<img class="order" src="'+imgSource+'"/>');
 };
 
 PhoenixDancer.prototype = Object.create(Dancer.prototype);
