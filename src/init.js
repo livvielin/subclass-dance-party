@@ -60,8 +60,6 @@ $(document).ready(function(){
     for (var k = 0; k < muggles.length; k++) {
       muggles[k].lineUp(muggleUnit * (k+1) - 0.75*muggleUnit);
     }
-
-    $("#HarryAudio").Play();
   });
 
   $(document).on("click", ".deathEater", function(event){
@@ -72,8 +70,76 @@ $(document).ready(function(){
     }
   });
 
-  $(".Harry").on("click", function(event) {
-    $("#Harry").load().Play();
+  var harryAudio = document.createElement('audio');
+  harryAudio.setAttribute('src', 'src/sounds/Harry.mp3');
+  harryAudio.setAttribute('loop', 'loop');
+  harryAudio.load();
+  $(document).on("click", ".Harry", function(event) {
+    if (harryAudio.paused) {
+      harryAudio.play();
+    } else {
+      harryAudio.pause();
+    }
+  });
+
+  var snapeAudio = document.createElement('audio');
+  snapeAudio.setAttribute('src', 'src/sounds/Snape.mp3');
+  snapeAudio.setAttribute('loop', 'loop');
+  snapeAudio.load();
+  $(document).on("click", ".Snape", function(event) {
+    if (snapeAudio.paused) {
+      snapeAudio.play();
+    } else {
+      snapeAudio.pause();
+    }
+  });
+
+  var ronAudio = document.createElement('audio');
+  ronAudio.setAttribute('src', 'src/sounds/Ron.mp3');
+  ronAudio.setAttribute('loop', 'loop');
+  ronAudio.load();
+  $(document).on("click", ".Ron", function(event) {
+    if (ronAudio.paused) {
+      ronAudio.play();
+    } else {
+      ronAudio.pause();
+    }
+  });
+
+  var hermioneAudio = document.createElement('audio');
+  hermioneAudio.setAttribute('src', 'src/sounds/Hermione.mp3');
+  hermioneAudio.setAttribute('loop', 'loop');
+  hermioneAudio.load();
+  $(document).on("click", ".Hermione", function(event) {
+    if (hermioneAudio.paused) {
+      hermioneAudio.play();
+    } else {
+      hermioneAudio.pause();
+    }
+  });
+
+  var dumbledoreAudio = document.createElement('audio');
+  dumbledoreAudio.setAttribute('src', 'src/sounds/Dumbledore.mp3');
+  dumbledoreAudio.setAttribute('loop', 'loop');
+  dumbledoreAudio.load();
+  $(document).on("click", ".Dumbledore", function(event) {
+    if (dumbledoreAudio.paused) {
+      dumbledoreAudio.play();
+    } else {
+      dumbledoreAudio.pause();
+    }
+  });
+
+  var voldemortAudio = document.createElement('audio');
+  voldemortAudio.setAttribute('src', 'src/sounds/Voldemort.mp3');
+  voldemortAudio.setAttribute('loop', 'loop');
+  voldemortAudio.load();
+  $(document).on("click", ".Voldemort", function(event) {
+    if (voldemortAudio.paused) {
+      voldemortAudio.play();
+    } else {
+      voldemortAudio.pause();
+    }
   });
 
 });
