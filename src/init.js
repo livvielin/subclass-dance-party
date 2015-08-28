@@ -132,7 +132,6 @@ $(document).ready(function(){
 
   var voldemortAudio = document.createElement('audio');
   voldemortAudio.setAttribute('src', 'src/sounds/Voldemort.mp3');
-  voldemortAudio.setAttribute('loop', 'loop');
   voldemortAudio.load();
   $(document).on("click", ".Voldemort", function(event) {
     if (voldemortAudio.paused) {
