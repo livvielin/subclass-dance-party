@@ -54,14 +54,14 @@ $(document).ready(function(){
     for (var i = 0; i < deathEaters.length; i++) {
       deathEaters[i].lineUp(deathUnit * (i+1) - 0.75*deathUnit);
     }
-    for (var i = 0; i < phoenixes.length; i++) {
-      phoenixes[i].lineUp(phoenixUnit * (i+1) - 0.75*phoenixUnit);
+    for (var j = 0; j < phoenixes.length; j++) {
+      phoenixes[j].lineUp(phoenixUnit * (j+1) - 0.75*phoenixUnit);
     }
-    for (var i = 0; i < muggles.length; i++) {
-      muggles[i].lineUp(muggleUnit * (i+1) - 0.75*muggleUnit);
+    for (var k = 0; k < muggles.length; k++) {
+      muggles[k].lineUp(muggleUnit * (k+1) - 0.75*muggleUnit);
     }
 
-    $("#Harry").play();
+    $("#HarryAudio").Play();
   });
 
   $(document).on("click", ".deathEater", function(event){
@@ -73,7 +73,7 @@ $(document).ready(function(){
   });
 
   $(".Harry").on("click", function(event) {
-    $("#Harry").load().play();
+    $("#Harry").load().Play();
   });
 
 });
