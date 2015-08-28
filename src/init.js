@@ -137,6 +137,11 @@ $(document).ready(function(){
   $(document).on("click", ".Voldemort", function(event) {
     if (voldemortAudio.paused) {
       voldemortAudio.play();
+      ronAudio.pause();
+      harryAudio.pause();
+      hermioneAudio.pause();
+      snapeAudio.pause();
+      dumbledoreAudio.pause();
     } else {
       voldemortAudio.pause();
     }
