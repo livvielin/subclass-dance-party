@@ -34,7 +34,17 @@ DeathEaterDancer.prototype.lineUp = function(x) {
 
 DeathEaterDancer.prototype.annihilate = function() {
   for (var enemy = 0; enemy < window.dancers.length; enemy++) {
-    if (!(window.dancers[enemy] instanceof DeathEaterDancer)) {
+    if (this.$node.hasClass("Voldemort")) {
+      if (this.$node.css('left') !== window.dancers[enemy].$node.css('left')) {
+        window.dancers[enemy].$node.remove();
+        window.dancers.splice(enemy,1);
+      }
+    } else if (this.$node.hasClass("Snape")) {
+      if (window.dancers[enemy].$node.hasClass("Voldemort")) {
+        window.dancers[enemy].$node.remove();
+        window.dancers.splice(enemy,1);
+      }
+    } else if (!(window.dancers[enemy] instanceof DeathEaterDancer)) {
       var distance = this.findDistance(window.dancers[enemy]);
       if (window.dancers[enemy] instanceof PhoenixDancer) {
         if (distance < 500) {

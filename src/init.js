@@ -78,7 +78,7 @@ $(document).ready(function(){
     if (harryAudio.paused) {
       harryAudio.play();
     } else {
-      harryAudio.pause();
+      harryAudio.load();
     }
   });
 
@@ -90,7 +90,7 @@ $(document).ready(function(){
     if (snapeAudio.paused) {
       snapeAudio.play();
     } else {
-      snapeAudio.pause();
+      snapeAudio.load();
     }
   });
 
@@ -102,7 +102,7 @@ $(document).ready(function(){
     if (ronAudio.paused) {
       ronAudio.play();
     } else {
-      ronAudio.pause();
+      ronAudio.load();
     }
   });
 
@@ -114,7 +114,7 @@ $(document).ready(function(){
     if (hermioneAudio.paused) {
       hermioneAudio.play();
     } else {
-      hermioneAudio.pause();
+      hermioneAudio.load();
     }
   });
 
@@ -126,7 +126,7 @@ $(document).ready(function(){
     if (dumbledoreAudio.paused) {
       dumbledoreAudio.play();
     } else {
-      dumbledoreAudio.pause();
+      dumbledoreAudio.load();
     }
   });
 
@@ -142,7 +142,7 @@ $(document).ready(function(){
       snapeAudio.pause();
       dumbledoreAudio.pause();
     } else {
-      voldemortAudio.pause();
+      voldemortAudio.load();
     }
   });
 
